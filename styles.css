@@ -309,7 +309,7 @@ header {
     z-index: 2;
     width: 100%;
     height: 400px; /* Altura para mobile */
-    background-image: url('../sm/assentes/alusys/DSC08126-2.jpg'); /* Substitua pelo caminho da imagem */
+    background-image: url('./assentes/alusys/DSC08126-2.jpg'); /* Substitua pelo caminho da imagem */
     background-size: cover;
     background-position: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
