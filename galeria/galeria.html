@@ -93,6 +93,25 @@
                 <p class="copyright">© 2025 SM. All rights reserved.</p>
             </div>
         </footer>
+
+        <script>
+            window.addEventListener("scroll", function() {
+                const header = document.querySelector("header");
+                if (window.scrollY > 50) {
+                    header.classList.add("solid");
+                } else {
+                    header.classList.remove("solid");
+                }
+            });
+    
+            function toggleMenu() {
+      const nav = document.querySelector('nav ul');
+      const hamburger = document.querySelector('.hamburger');
+      nav.classList.toggle('show'); // Mostra/Esconde o menu
+      hamburger.classList.toggle('active'); // Anima o ícone hambúrguer
+    }
+    
+        </script>
     
 </body>
 </html>
