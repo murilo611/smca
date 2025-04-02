@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrossel de Imagens</title>
+    <link rel="stylesheet" href="./carrosel.css">
+</head>
+<body>
+
+  <header>
+    <div class="logo">SM</div>
+    <nav>
+        <ul>
+            <li><a href="../index.html" class="active">HOME</a></li>
+            <li><a href="../Sobre/sobre.html">SOBRE</a></li>
+            <li><a href="../produtos/produtos.html">PRODUTOS</a></li>
+            <li><a href="../galeria/galeria.html">GALERIA</a></li>
+            <li>
+              <a href="../contacto/contacto.html" class="active1">
+                  <span class="icon">✉</span>
+                  <span>CONTACTO</span>
+              </a>
+          </li>
+
+        </ul>
+    </nav>
+    <div class="hamburger" onclick="toggleMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+   
+</header>
+
+    <div class="project-header">
+      <h5>SM Caixilharia</h5>
+      <p>PROJECTO EXTERIOR PAREDES DO BAIRRO</p>
+    </div>
+
+
+    <div class="carousel-container">
+        <div class="carousel">
+         
+          <div class="slide"><img src="./imgobras/OBRA 1 - PAREDES DO BAIRRO/1.jpg" alt="Slide 1"></div>
+          <div class="slide"><img src="./imgobras/OBRA 1 - PAREDES DO BAIRRO/2.jpg" alt="Slide 2"></div>
+          <div class="slide"><img src="./imgobras/OBRA 1 - PAREDES DO BAIRRO/3.jpg" alt="Slide 3"></div>
+          <div class="slide"><img src="./imgobras/OBRA 1 - PAREDES DO BAIRRO/4.jpg" alt="Slide 4"></div>
+          <div class="slide"><img src="./imgobras/OBRA 1 - PAREDES DO BAIRRO/5.jpg" alt="Slide 5"></div>
+          <div class="slide"><img src="./imgobras/OBRA 1 - PAREDES DO BAIRRO/6.jpg" alt="Slide 6"></div>
+     
+   
+
+        </div>
+        <div class="carousel-controls">
+          <button class="prev" onclick="moveSlide(-1)">❮</button>
+          <button class="next" onclick="moveSlide(1)">❯</button>
+        </div>
+      </div>
+      
+      <div class="info">
+        <div class="info-box">
+          <span>CLIENT</span>
+          <p>PAREDES DO BAIRRO</p>
+        </div>
+        <div class="info-box">
+          <span>LOCATION</span>
+          <p>PORTUGAL</p>
+        </div>
+        <div class="info-box">
+          <span>DATE</span>
+          <p>PAREDES DO BAIRRO</p>
+        </div>
+        <div class="info-box">
+          <span>SERVICE</span>
+          <p>CAIXILHARIA DESIGN</p>
+        </div>
+      </div>
+      
+      <div class="description">
+        <p>
+          
+            O projeto da SM Caixilharia é um exemplo impressionante de luxo e harmonia com a natureza. A empresa foi responsável pela execução de caixilharia de alta qualidade, desenhada para maximizar as vistas das montanhas e capturar a tranquilidade do ambiente montanhoso. As amplas janelas e portas panorâmicas criam uma integração perfeita entre os espaços internos e externos, proporcionando uma transição fluida e natural com a paisagem. Materiais nobres, como madeira e pedra, foram escolhidos para reforçar a conexão com o ambiente, enquanto os sistemas de caixilharia modernos garantem conforto, segurança e eficiência térmica. Além disso, o projeto incorpora soluções sustentáveis, com sistemas energeticamente eficientes e materiais ecológicos, sempre com o compromisso de reduzir o impacto ambiental. Cada detalhe da caixilharia foi pensado para criar um refúgio sereno e luxuoso, perfeitamente integrado à beleza natural das montanhas.</p>
+      </div>
+
+      <div class="button-container">
+        <a href="./coimbra1.html">
+            <button class="btn">Previous</button>
+        </a>
+        <a href="../galeria/galeria.html">
+            <button class="btn grid">⏹</button>
+        </a>
+        <a href="./coimbra.html">
+            <button class="btn">Next</button>
+        </a>
+    </div>
+      
+
+
+    <footer>
+      <div class="footer-overlay"></div>
+      <div class="footer-content">
+          <h2 class="next-step-title">VAMOS DAR O PRÓXIMO PASSO JUNTOS</h2>
+          <h3>SOBRE O SEU PROJECTO</h3>
+          <a href="../contacto/contacto.html">
+              <button class="contact-button">CONTACTO</button>
+          </a>
+          <div class="contact-info">
+              <p>Zona Industrial de Viadores, Lote 20, 3050-451 Mealhada - Portugal</p>
+              <p>Telefone fixo: +351 231 201 083</p>
+              <p>Emails: geral@santos-martins.pt, orcamentoa@santos-martins.pt</p>
+          </div>
+          <div class="social-icons">
+              <img src="../Outros/instagram (1).png" alt="Instagram">
+              <img src="../Outros/facebook (1).png" alt="Facebook">
+              <img src="../Outros/linkedin (1).png" alt="LinkedIn">
+          </div>
+          <p class="copyright">© 2025 SM. All rights reserved.</p>
+      </div>
+  </footer>
+
+
+
+    <script> let index = 0;
+        const slides = document.querySelectorAll(".slide");
+        const totalSlides = slides.length;
+        const visibleSlides = 3; // Show 3 slides at a time
+        const step = 1;
+        
+        function moveSlide(direction) {
+          index += direction * step;
+          if (index < 0) {
+            index = totalSlides - visibleSlides;
+          } else if (index > totalSlides - visibleSlides) {
+            index = 0;
+          }
+          document.querySelector(".carousel").style.transform = `translateX(-${index * (100 / visibleSlides)}%)`;
+        }
+        
+        function toggleMenu() {
+  const nav = document.querySelector('nav ul');
+  const hamburger = document.querySelector('.hamburger');
+  nav.classList.toggle('show'); // Mostra/Esconde o menu
+  hamburger.classList.toggle('active'); // Anima o ícone hambúrguer
+}
+
+        
+        
+        </script>
+</body>
+</html>

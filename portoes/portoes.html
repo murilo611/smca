@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PORTOESS</title>
+    <link rel="stylesheet" href="./portoes.css">
+</head>
+<body>
+    <header>
+        <div class="logo">SM</div>
+        <nav>
+            <ul>
+                <li><a href="../index.html" class="active">HOME</a></li>
+                <li><a href="../Sobre/sobre.html">SOBRE</a></li>
+                <li><a href="../produtos/produtos.html">PRODUTOS</a></li>
+                <li><a href="../galeria/galeria.html">GALERIA</a></li>
+                <li>
+                  <a href="../contacto/contacto.html" class="active1">
+                      <span class="icon">✉</span>
+                      <span>CONTACTO</span>
+                  </a>
+              </li>
+    
+            </ul>
+        </nav>
+        <div class="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+       
+    </header>
+
+
+    <h1>PORTÕES</h1>
+    <div class="container">
+        <figure>
+            <img src="./PORTÕES/POR - I - 1.png" alt="Perfil Batente">
+            <figcaption>POR - I - 1</figcaption>
+        </figure>
+      
+       
+        
+    </div>
+    
+
+    <div class="button-container">
+        <a href="../portada/portada.html" class="nav-button">
+          &#8592;
+        </a>
+        <a href="../peças/peças.html" class="nav-button">Voltar</a>
+        <a href="../batente/batente.html" class="nav-button">
+          &#8594;
+        </a>
+      </div>
+      
+
+      <footer>
+        <div class="footer-overlay"></div>
+        <div class="footer-content">
+            <h2 class="next-step-title">VAMOS DAR O PRÓXIMO PASSO JUNTOS</h2>
+            <h3>SOBRE O SEU PROJECTO</h3>
+            <a href="../contacto/contacto.html">
+                <button class="contact-button">CONTACTO</button>
+            </a>
+            <div class="contact-info">
+                <p>Zona Industrial de Viadores, Lote 20, 3050-451 Mealhada - Portugal</p>
+                <p>Telefone fixo: +351 231 201 083</p>
+                <p>Emails: geral@santos-martins.pt, orcamentoa@santos-martins.pt</p>
+            </div>
+            <div class="social-icons">
+                <img src="../Outros/instagram (1).png" alt="Instagram">
+                <img src="../Outros/facebook (1).png" alt="Facebook">
+                <img src="../Outros/linkedin (1).png" alt="LinkedIn">
+            </div>
+            <p class="copyright">© 2025 SM. All rights reserved.</p>
+        </div>
+    </footer>
+
+
+
+            <script>
+               
+        
+                function toggleMenu() {
+          const nav = document.querySelector('nav ul');
+          const hamburger = document.querySelector('.hamburger');
+          nav.classList.toggle('show'); // Mostra/Esconde o menu
+          hamburger.classList.toggle('active'); // Anima o ícone hambúrguer
+        }
+        
+            </script>
+        </body>
+        </html>

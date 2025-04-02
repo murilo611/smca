@@ -1,0 +1,359 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    margin-top: 200px;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    overflow-x: hidden;
+}
+
+/* Estilo para telas grandes */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center; /* Centraliza o conteúdo dentro do header */
+  align-items: center;
+  padding: 25px 35px;
+  background-color: rgba(32, 31, 31, 0); /* Transparente */
+  color: #fff;
+  z-index: 1000;
+  transition: background-color 0.3s ease; /* Transição suave */
+}
+
+header.solid {
+  background-color: #1d2024; /* Fundo sólido */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Adicione sombra */
+}
+
+.logo {
+  position: absolute;
+  left: 35px; /* Mantém o logo alinhado à esquerda */
+  font-size: 20px;
+  font-weight: bold;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center; /* Centraliza os itens dentro do menu */
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  margin: 0 15px; /* Espaçamento entre os itens */
+}
+
+nav ul li a {
+  color: #94755a;
+  text-decoration: none;
+  padding: 10px 15px; /* Espaçamento interno */
+  font-size: 16px;
+  border-radius: 4px;
+  transition: all 0.3s ease; /* Animação suave */
+}
+
+nav ul li a.active {
+  color: #94755a; /* Cor do texto do HOME */
+  background-color: #292d32; /* Cor do fundo do quadrado */
+  padding: 29px 30px; /* Aumenta os valores para destacar */
+}
+
+nav ul li a.active1 {
+  padding: 15px 30px; /* Ajuste o tamanho do preenchimento */
+  margin-left: 90px;
+  background-color: #94755a;
+  color: #000000;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 0; /* Remove completamente as bordas arredondadas */
+  text-align: center;
+}
+
+
+
+.contact-btn:hover {
+  background-color: #c99c5d; /* Efeito ao passar o mouse */
+}
+
+
+/* Estilos para telas menores */
+@media (max-width: 768px) {
+  header {
+    padding: 15px 20px; /* Ajusta o padding em telas menores */
+  }
+
+  nav ul {
+    display: none; /* Esconde o menu padrão */
+    flex-direction: column; /* Alinha itens verticalmente */
+    position: fixed;
+    top: 0;
+    left: 50%; /* Posiciona o menu no centro horizontal */
+    transform: translateX(-50%) translateY(-100%); /* Esconde fora da tela inicialmente */
+    width: 100%;
+    height: 100%;
+    background-color: #1d2024; /* Fundo escuro */
+    padding-top: 10px; /* Espaço no topo para o menu */
+    transition: transform 0.3s ease;
+  }
+
+  nav ul.show {
+    display: flex; /* Mostra o menu ao ativar */
+    transform: translateX(-50%) translateY(0); /* Move o menu para dentro da tela */
+  }
+
+  nav ul li {
+   
+    margin: 30px 0; /* Espaçamento entre os itens na barra lateral */
+    text-align: center; /* Centraliza o texto */
+  }
+
+  nav ul li a {
+    font-size: 18px; /* Ajusta para texto maior */
+    text-align: center; /* Centraliza o texto */
+  }
+
+  /* Ajuste específico para telas menores */
+@media (max-width: 768px) {
+  nav ul li a.active1 {
+    margin-left: 0; /* Remove o deslocamento horizontal */
+    padding: 15px 35px; /* Mantém o espaçamento interno */
+    width: 100%; /* Garante alinhamento centralizado no menu */
+    text-align: center; /* Centraliza o texto */
+  }
+}
+
+  /* Estilo do botão hambúrguer */
+  .hamburger {
+    display: flex; /* Mostra o botão hambúrguer em telas menores */
+    flex-direction: column;
+    position: absolute; /* Para facilitar o alinhamento */
+    top: 15px; /* Posiciona no topo */
+    left: 50%; /* Centraliza horizontalmente */
+    transform: translateX(-50%); /* Centralização perfeita */
+    z-index: 1001; /* Certifica que está acima do menu */
+    cursor: pointer;
+  }
+
+  .hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 4px 0;
+    transition: all 0.3s ease;
+  }
+
+ 
+}
+
+/* Efeito para o botão hambúrguer ao clicar */
+.hamburger.active div:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px); /* Gira a linha superior */
+}
+
+.hamburger.active div:nth-child(2) {
+  opacity: 0; /* Esconde a linha do meio */
+}
+
+.hamburger.active div:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px); /* Gira a linha inferior */
+}
+
+
+
+
+
+
+/* Estilos base (Mobile First: telas pequenas) */
+h1 {
+    color: #94755a;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 18px; /* Tamanho adequado para mobile */
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr; /* 1 coluna para telas pequenas */
+    gap: 20px; /* Espaçamento entre imagens */
+    max-width: 95%; /* Usar quase toda a largura da tela */
+    margin: 20px auto;
+    padding: 10px;
+}
+
+.container img {
+    width: 100%; /* Imagens ocupam o espaço disponível */
+    height: auto; /* Mantém proporções */
+    max-height: 300px; /* Limita a altura para evitar exageros */
+    object-fit: contain; /* Imagem sempre visível sem cortes */
+    transition: transform 0.3s ease; /* Suaviza o efeito de zoom */
+}
+
+.container img:hover {
+    transform: scale(1.1); /* Aumenta a imagem em 10% */
+}
+
+figure {
+    text-align: center; /* Centraliza as legendas */
+}
+
+figcaption {
+    margin-top: 8px;
+    font-size: 24px; /* Legenda menor para dispositivos móveis */
+    color: #000;
+}
+
+/* Estilos para telas maiores (Tablets e desktops) */
+@media (min-width: 768px) {
+    .container {
+        grid-template-columns: repeat(1, 1fr); /* 1 coluna em tablets */
+        gap: 30px; /* Aumenta o espaçamento para telas maiores */
+        max-width: 90%; /* Ajusta o espaço total */
+        margin: 30px auto;
+    }
+
+    h1 {
+        font-size: 22px; /* Ajuste no tamanho do título */
+    }
+
+    .container img {
+        width: 400px; /* Largura fixa */
+        height: 300px; /* Altura fixa */
+        object-fit: cover; /* Mantém proporção e corte elegante */
+    }
+
+    figcaption {
+        font-size: 14px; /* Legenda mais legível em telas maiores */
+    }
+}
+
+/* Estilos para desktops grandes */
+@media (min-width: 1024px) {
+    .container {
+        grid-template-columns: repeat(2, 1fr); /* 2 colunas para desktops */
+        gap: 40px; /* Espaçamento maior entre itens */
+        max-width: 1200px; /* Centralizado e bem espaçado */
+    }
+
+    .container img {
+        width: 400px; /* Largura fixa */
+        height: 300px; /* Altura fixa */
+        object-fit: cover; /* Mantém consistência no visual das imagens */
+    }
+
+    h1 {
+        font-size: 28px; /* Mais impacto no título para telas maiores */
+    }
+
+    figcaption {
+        font-size: 25px; /* Legenda maior e proporcional */
+    }
+}
+
+
+
+.button-container {
+  display: flex;
+  flex-direction: column; /* Empilha os botões (mobile-first) */
+  align-items: center;
+  gap: 10px;
+}
+
+.nav-button {
+  background-color: black;
+  color: white;
+  text-decoration: none; /* Remove o sublinhado dos links */
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  text-align: center;
+}
+
+.nav-button:hover {
+  background-color: gray; /* Efeito ao passar o mouse */
+}
+
+@media (min-width: 768px) {
+  .button-container {
+    flex-direction: row; /* Alinha os botões horizontalmente */
+    justify-content: center;
+  }
+
+  .nav-button {
+    width: auto; /* Retira a largura fixa */
+  }
+}
+
+@media (min-width: 1024px) {
+  .nav-button {
+    font-size: 18px; /* Aumenta o tamanho da fonte */
+    padding: 12px 24px; /* Ajusta o espaçamento */
+  }
+}
+
+
+footer {
+  position: relative;
+  margin-top: 50px;
+  background-image: url('../assentes/hero-1_edited.jpg'); /* Fundo da casa moderna */
+  background-size: cover;
+  background-position: center;
+  padding: 40px 0;
+  color: white;
+  z-index: 1;
+  overflow: hidden; /* Garante que o conteúdo extra não transborde */
+}
+.social-icons img {
+  width: 50px; /* Define largura das imagens */
+  height: 50px; /* Define altura das imagens */
+  object-fit: contain; /* Garante que as imagens mantenham proporções */
+  margin: 10px; /* Espaçamento entre as imagens */
+}
+
+.contact-button{
+  padding: 15px 30px; /* Ajuste o tamanho do preenchimento */
+  margin-left: 20px;
+  background-color: #94755a;
+  color: #000000;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 0; /* Remove completamente as bordas arredondadas */
+  text-align: center;
+}
+
+.next-step-title {
+  font-size: 18px; /* Tamanho do texto */
+  color: #94755a; /* Cor do texto */
+  text-transform: uppercase; /* Deixa o texto em letras maiúsculas */
+  text-align: center; /* Centraliza o texto */
+  margin-bottom: 20px; /* Espaçamento abaixo do título */
+  font-weight: bold; /* Deixa o texto mais forte */
+}
+
+
+.footer-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.904), rgba(24, 23, 23, 0.87)); /* Gradiente esfumaçado */
+  z-index: -1; /* Garante que a sobreposição fique abaixo do conteúdo */
+}
+
+.footer-content {
+  position: relative;
+  z-index: 2; /* Garante que o conteúdo fique acima da sobreposição */
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+}

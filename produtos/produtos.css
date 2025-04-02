@@ -1,0 +1,388 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #1d2024;
+    overflow-x: hidden;
+}
+
+
+
+
+/* Estilo para telas grandes */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center; /* Centraliza o conteúdo dentro do header */
+  align-items: center;
+  padding: 25px 35px;
+  background-color: rgba(32, 31, 31, 0); /* Transparente */
+  color: #fff;
+  z-index: 1000;
+  transition: background-color 0.3s ease; /* Transição suave */
+}
+
+header.solid {
+  background-color: #1d2024; /* Fundo sólido */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Adicione sombra */
+}
+
+.logo {
+  position: absolute;
+  left: 35px; /* Mantém o logo alinhado à esquerda */
+  font-size: 20px;
+  font-weight: bold;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center; /* Centraliza os itens dentro do menu */
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  margin: 0 15px; /* Espaçamento entre os itens */
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 15px; /* Espaçamento interno */
+  font-size: 16px;
+  border-radius: 4px;
+  transition: all 0.3s ease; /* Animação suave */
+}
+
+nav ul li a.active {
+  color: #94755a; /* Cor do texto do HOME */
+  background-color: #292d32; /* Cor do fundo do quadrado */
+  padding: 29px 30px; /* Aumenta os valores para destacar */
+}
+
+nav ul li a.active1 {
+  padding: 15px 30px; /* Ajuste o tamanho do preenchimento */
+  margin-left: 90px;
+  background-color: #94755a;
+  color: #000000;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 0; /* Remove completamente as bordas arredondadas */
+  text-align: center;
+}
+
+
+
+.contact-btn:hover {
+  background-color: #c99c5d; /* Efeito ao passar o mouse */
+}
+
+
+/* Estilos para telas menores */
+@media (max-width: 768px) {
+  header {
+    padding: 15px 20px; /* Ajusta o padding em telas menores */
+  }
+
+  nav ul {
+    display: none; /* Esconde o menu padrão */
+    flex-direction: column; /* Alinha itens verticalmente */
+    position: fixed;
+    top: 0;
+    left: 50%; /* Posiciona o menu no centro horizontal */
+    transform: translateX(-50%) translateY(-100%); /* Esconde fora da tela inicialmente */
+    width: 100%;
+    height: 100%;
+    background-color: #1d2024; /* Fundo escuro */
+    padding-top: 10px; /* Espaço no topo para o menu */
+    transition: transform 0.3s ease;
+  }
+
+  nav ul.show {
+    display: flex; /* Mostra o menu ao ativar */
+    transform: translateX(-50%) translateY(0); /* Move o menu para dentro da tela */
+  }
+
+  nav ul li {
+   
+    margin: 30px 0; /* Espaçamento entre os itens na barra lateral */
+    text-align: center; /* Centraliza o texto */
+  }
+
+  nav ul li a {
+    font-size: 18px; /* Ajusta para texto maior */
+    text-align: center; /* Centraliza o texto */
+  }
+
+  /* Ajuste específico para telas menores */
+@media (max-width: 768px) {
+  nav ul li a.active1 {
+    margin-left: 0; /* Remove o deslocamento horizontal */
+    padding: 15px 35px; /* Mantém o espaçamento interno */
+    width: 100%; /* Garante alinhamento centralizado no menu */
+    text-align: center; /* Centraliza o texto */
+  }
+}
+
+  /* Estilo do botão hambúrguer */
+  .hamburger {
+    display: flex; /* Mostra o botão hambúrguer em telas menores */
+    flex-direction: column;
+    position: absolute; /* Para facilitar o alinhamento */
+    top: 15px; /* Posiciona no topo */
+    left: 50%; /* Centraliza horizontalmente */
+    transform: translateX(-50%); /* Centralização perfeita */
+    z-index: 1001; /* Certifica que está acima do menu */
+    cursor: pointer;
+  }
+
+  .hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 4px 0;
+    transition: all 0.3s ease;
+  }
+
+ 
+}
+
+/* Efeito para o botão hambúrguer ao clicar */
+.hamburger.active div:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px); /* Gira a linha superior */
+}
+
+.hamburger.active div:nth-child(2) {
+  opacity: 0; /* Esconde a linha do meio */
+}
+
+.hamburger.active div:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px); /* Gira a linha inferior */
+}
+
+
+
+h1 {
+   
+    text-align: center;
+    font-size: 36px;
+    margin-top: 100px;
+    color: #f5f5f5;
+}
+
+p {
+ 
+    text-align: center;
+    font-size: 18px;
+    margin-top: 20px;
+    color: #fcfcfc;
+}
+
+
+
+.section {
+    display: flex;
+    flex-direction: column; /* Layout padrão para dispositivos móveis */
+    justify-content: center;
+    align-items: center; /* Centraliza as caixas */
+    margin-top: 40px;
+    background-color: #1d2024;
+    width: 100%; /* Garante largura completa */
+}
+
+.section-title {
+    color: #94755a; /* Cor do texto */
+    font-size: 20px; /* Ajuste o tamanho do título */
+    font-weight: bold;
+    text-align: center; /* Centraliza o texto */
+    margin-bottom: 2px; /* Espaço abaixo do título */
+}
+
+.section-subtitle {
+  font-weight: bold; /* Deixa o texto em negrito */
+    color: #ffffff; /* Cor do subtítulo */
+    font-size: 40px; /* Ajuste o tamanho do subtítulo */
+    text-align: center; /* Centraliza o texto */
+    margin-bottom: 150px; /* Espaço abaixo do subtítulo */
+}
+
+
+.box {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza os elementos dentro das caixas */
+    width: 100%; /* Tamanho automático para dispositivos móveis */
+    max-width: 300px; /* Tamanho máximo para evitar caixas muito largas */
+    height: auto;
+    padding: 20px;
+    margin: 5px;
+    gap: 20px;
+    background-color: #292d32;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 3;
+}
+
+.box:hover{
+    background-color: #1d2024;
+
+
+}
+
+
+.box img {
+    width: 100px; /* Ajuste o tamanho da imagem conforme necessário */
+    height: auto;
+    margin-bottom: 5px;
+}
+
+.box h3 {
+    color: #fff;
+    font-size: 18px;
+    margin-bottom: 10px;
+    text-align: center; /* Centraliza o texto */
+    line-height: 1.6; /* Aumenta o espaçamento entre linhas */
+  word-break: break-word; /* Garante que palavras longas sejam quebradas */
+  hyphens: auto; /* Adiciona hifenização automática, se suportada */
+ 
+}
+
+.box p {
+    color: #fff;
+    font-size: 14px;
+    text-align: center; /* Centraliza o texto */
+    margin-bottom: 20px;
+}
+
+.explore-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #94755a; /* Fundo preto */
+    color: #000000da; /* Texto branco */
+    text-decoration: none;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Suaviza a transição */
+}
+
+.explore-btn:hover {
+    background-color: #94755a;
+    color: #ffffff; /* Cor do texto ao passar o mouse */
+}
+
+
+
+
+
+
+/* Media Queries para dispositivos maiores */
+@media (min-width: 600px) {
+    .section {
+        flex-direction: row; /* Altera para row */
+        gap: 5px;
+        margin-left: 10px;
+    }
+
+    .box {
+        width: 70%; /* Ajuste o tamanho conforme necessário */
+        height: 500px; /* Altura fixa conforme necessário */
+        padding: 80px; /* Ajuste o padding conforme necessário */
+        margin: 20px;
+        gap: 10px;
+       
+    }
+
+    .box img {
+        width: 180px; /* Ajuste o tamanho da imagem conforme necessário */
+    }
+
+    .box h3 {
+        font-size: 20px; /* Ajuste o tamanho da fonte conforme necessário */
+        line-height: 1.8; /* Aumenta o espaçamento entre linhas */
+        word-break: break-word; /* Garante que palavras longas sejam quebradas */
+        hyphens: auto; /* Adiciona hifenização automática, se suportada */
+    }
+
+    .box p {
+        font-size: 16px; /* Ajuste o tamanho da fonte conforme necessário */
+        line-height: 1.8; /* Aumenta o espaçamento entre linhas */
+        word-break: break-word; /* Garante que palavras longas sejam quebradas */
+        hyphens: auto; /* Adiciona hifenização automática, se suportada */
+    }
+}
+
+@media (min-width: 900px) {
+    .box {
+        width: 30%; /* Ajuste o tamanho conforme necessário */
+        gap: -5px;
+    }
+}
+
+
+footer {
+  position: relative;
+  margin-top: 50px;
+  background-image: url('../assentes/hero-1_edited.jpg'); /* Fundo da casa moderna */
+  background-size: cover;
+  background-position: center;
+  padding: 40px 0;
+  color: white;
+  z-index: 1;
+  overflow: hidden; /* Garante que o conteúdo extra não transborde */
+}
+.social-icons img {
+  width: 50px; /* Define largura das imagens */
+  height: 50px; /* Define altura das imagens */
+  object-fit: contain; /* Garante que as imagens mantenham proporções */
+  margin: 10px; /* Espaçamento entre as imagens */
+}
+
+.contact-button{
+  padding: 15px 30px; /* Ajuste o tamanho do preenchimento */
+  margin-left: 20px;
+  background-color: #94755a;
+  color: #000000;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 0; /* Remove completamente as bordas arredondadas */
+  text-align: center;
+}
+
+.next-step-title {
+  font-size: 18px; /* Tamanho do texto */
+  color: #94755a; /* Cor do texto */
+  text-transform: uppercase; /* Deixa o texto em letras maiúsculas */
+  text-align: center; /* Centraliza o texto */
+  margin-bottom: 20px; /* Espaçamento abaixo do título */
+  font-weight: bold; /* Deixa o texto mais forte */
+}
+
+
+.footer-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.904), rgba(24, 23, 23, 0.87)); /* Gradiente esfumaçado */
+  z-index: -1; /* Garante que a sobreposição fique abaixo do conteúdo */
+}
+
+.footer-content {
+  position: relative;
+  z-index: 2; /* Garante que o conteúdo fique acima da sobreposição */
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+}
