@@ -213,14 +213,19 @@ header {
     z-index: 2;
     position: relative;
     padding: 10px;
+    text-align: center;
+    left: -17px;
 }
-.hero p{
+.hero p {
     font-size: 30px;
     z-index: 2;
     position: relative;
     padding: 10px;
-    
+    text-align: center;
+    left: -17px;
 }
+
+
 
 .hero-btn {
     display: inline-block;
