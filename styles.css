@@ -213,7 +213,7 @@ header {
     z-index: 2;
     position: relative;
     padding: 10px;
-    text-align: center;
+   
     left: -17px;
 }
 .hero p {
@@ -221,7 +221,7 @@ header {
     z-index: 2;
     position: relative;
     padding: 10px;
-    text-align: center;
+    
     left: -17px;
 }
 
