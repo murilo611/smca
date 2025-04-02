@@ -247,28 +247,28 @@ nav ul li a.active1 {
 }
 
 .slide {
-  flex: 0 0 100%; /* Mostra uma imagem por vez */
+  flex: 0 0 100%; /* Mostra uma imagem por vez em mobile */
   height: 100%;
-  margin-right: 0; /* Remove o espaçamento entre slides */
+  margin-right: 0;
 }
 
 .carousel img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  max-width: 100%; /* Limita o tamanho para evitar distorções */
+  max-width: 100%;
   border-radius: 5px;
   border: 1px solid #444;
   transition: transform 0.8s ease-in-out;
 }
 
 .carousel img:hover {
-  transform: scale(1.05); /* Ajuste menor no hover */
+  transform: scale(1.05);
 }
 
 .carousel-controls {
   position: absolute;
-  top: 90%; /* Coloca os controles abaixo do carousel */
+  top: 90%;
   transform: translateY(-50%);
   width: 100%;
   display: flex;
@@ -302,28 +302,27 @@ nav ul li a.active1 {
 @media (min-width: 768px) {
   .carousel-container {
     max-width: 1400px;
-    height: 400px; /* Altura original */
+    height: 400px;
     margin-top: 100px;
   }
 
   .slide {
     flex: 0 0 calc(33.33% - 10px); /* Mostra 3 slides ao mesmo tempo */
-    margin-right: 15px; /* Espaçamento entre os slides */
+    margin-right: 15px;
   }
 
   .carousel-controls {
-    top: 50%; /* Centraliza os controles verticalmente */
+    top: 50%;
     transform: translateY(-50%);
   }
 
   .prev,
   .next {
-    width: 40px; /* Botões maiores */
+    width: 40px;
     height: 40px;
-    font-size: 16px; /* Texto maior */
+    font-size: 16px;
   }
 }
-
 
 
 
