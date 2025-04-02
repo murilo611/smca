@@ -130,6 +130,7 @@ nav ul li a.active1 {
 
   /* Estilo do botão hambúrguer */
   .hamburger {
+    color: #94755a;
     display: flex; /* Mostra o botão hambúrguer em telas menores */
     flex-direction: column;
     position: absolute; /* Para facilitar o alinhamento */
