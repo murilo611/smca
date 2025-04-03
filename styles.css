@@ -217,7 +217,7 @@ header {
     left: -17px;
 }
 .hero p {
-    font-size: 30px;
+    font-size: 24px;
     z-index: 2;
     position: relative;
     padding: 10px;
@@ -234,6 +234,7 @@ header {
     background-color: transparent; /* Fundo transparente */
     color: #fff; /* Cor do texto para manter contraste */
     text-decoration: none;
+    margin-left: -25px;
     font-size: 16px;
     border: 2px solid #fff; /* Adiciona uma borda para delinear o botão */
     border-radius: 5px;
@@ -732,13 +733,16 @@ header {
     position: relative;
     width: 100%; /* Garantir largura completa para dispositivos móveis */
     margin-top: 160px;
+    text-align: center;
 }
 
 .image-text-section img {
     width: 100%;
     height: auto;
-    display: block;
+    margin: auto; /* Alinha automaticamente ao centro */
+    display: block; /* Garante que a imagem seja tratada como um bloco */
 }
+
 
 .text-overlay {
     position: relative; /* Base para dispositivos móveis */
